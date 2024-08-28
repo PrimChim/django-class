@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <h1>Sign up page</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {% if message %}
+        <p style="color: green">{{message}}</p>
+        {% endif %}
+        {% if error %}
+        <p style="color: red;">{{error}}</p>
+        {% endif %}
+        <label for="">First Name</label>
+        <br>
+        <input type="text" name="first_name" id="">
+        <br>
+
+        <label for="">Last Name</label>
+        <br>
+
+        <input type="text" name="last_name" id="">
+        <br>
+
+        <label for="">Email</label>
+        <br>
+
+        <input type="email" name="email" id="">
+        <br>
+
+        <label for="">Password</label>
+        <br>
+
+        <input type="password" name="password">
+        <br>
+
+        <label for="">Retype Password</label>
+        <br>
+
+        <input type="password" name="password2">
+        <br>
+
+        <input type="submit" value="Create">
+    </form>
+</body>
+
+</html>
