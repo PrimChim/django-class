@@ -1,1 +1,4 @@
 <h1>Homepage</h1>
+{% if request.user %}
+<p>{{user.first_name}}</p>
+{% endif %}

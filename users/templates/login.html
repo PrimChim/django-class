@@ -11,6 +11,9 @@
     <form method="post">
         <h1>Login page</h1>
         {% csrf_token %}
+        {% if error %}
+        <p style="padding: 4px; background-color: red; color: white; width: fit-content;">{{error}}</p>
+        {% endif %}
         <label for="">Username or email</label>
         <br>
         <input type="text" name="username" placeholder="Enter your email or username" id="">
